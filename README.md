@@ -17,6 +17,11 @@ FlutterBluePlus is a bluetooth plugin for [Flutter](https://flutter.dev), a new 
 ## Cross-Platform Bluetooth LE
 FlutterBluePlus aims to offer the most from both platforms (iOS and Android).
 
+<b>note from ohdonpiano</b>
+I'm going to first re-introduce macOS support and then add windows 10+ support.
+I've scheduled this job in early february 2023, releasing asap.
+I'll be testing with real peripheral hardware (some smart locks).
+
 Using the FlutterBluePlus instance, you can scan for and connect to nearby devices ([BluetoothDevice](#bluetoothdevice-api)).
 Once connected to a device, the BluetoothDevice object can discover services ([BluetoothService](lib/src/bluetooth_service.dart)), characteristics ([BluetoothCharacteristic](lib/src/bluetooth_characteristic.dart)), and descriptors ([BluetoothDescriptor](lib/src/bluetooth_descriptor.dart)).
 The BluetoothDevice object is then used to directly interact with characteristics and descriptors.
