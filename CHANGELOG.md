@@ -1,3 +1,7 @@
+## 1.5.0
+* MacOS: Added support by copying iOS implementation. 
+* MacOS: added platform in Example project.
+
 ## 1.4.0
 * Android: Add clear gatt cache method #142 (thanks to joistaus)
 * Android: Opt-out of the `neverForLocation` permission flag for the `BLUETOOTH_SCAN` permission. (thanks to navaronbracke)

@@ -1,0 +1,32 @@
+PODS:
+  - flutter_blue_plus (0.0.1):
+    - flutter_blue_plus/Protos (= 0.0.1)
+    - FlutterMacOS
+  - flutter_blue_plus/Protos (0.0.1):
+    - FlutterMacOS
+    - Protobuf (~> 3.11)
+  - FlutterMacOS (1.0.0)
+  - Protobuf (3.21.12)
+
+DEPENDENCIES:
+  - flutter_blue_plus (from `Flutter/ephemeral/.symlinks/plugins/flutter_blue_plus/macos`)
+  - FlutterMacOS (from `Flutter/ephemeral`)
+
+SPEC REPOS:
+  trunk:
+    - Protobuf
+
+EXTERNAL SOURCES:
+  flutter_blue_plus:
+    :path: Flutter/ephemeral/.symlinks/plugins/flutter_blue_plus/macos
+  FlutterMacOS:
+    :path: Flutter/ephemeral
+
+SPEC CHECKSUMS:
+  flutter_blue_plus: 43e6368a819d27064630710ce3190a3171b14984
+  FlutterMacOS: 8f6f14fa908a6fb3fba0cd85dbd81ec4b251fb24
+  Protobuf: 120350fc38646e2dedc26f49ecba778184ea1de2
+
+PODFILE CHECKSUM: 353c8bcc5d5b0994e508d035b5431cfe18c1dea7
+
+COCOAPODS: 1.11.3

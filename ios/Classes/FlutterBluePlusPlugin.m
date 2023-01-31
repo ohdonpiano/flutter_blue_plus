@@ -473,7 +473,7 @@ typedef NS_ENUM(NSUInteger, LogLevel) {
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
-  NSLog(@"didUpdateValueForCharacteristic %@", [peripheral.identifier UUIDString]);
+  //NSLog(@"didUpdateValueForCharacteristic %@", [peripheral.identifier UUIDString]);
   ProtosReadCharacteristicResponse *result = [[ProtosReadCharacteristicResponse alloc] init];
   [result setRemoteId:[peripheral.identifier UUIDString]];
   [result setCharacteristic:[self toCharacteristicProto:peripheral characteristic:characteristic]];
@@ -487,7 +487,7 @@ typedef NS_ENUM(NSUInteger, LogLevel) {
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
-  NSLog(@"didWriteValueForCharacteristic");
+  //NSLog(@"didWriteValueForCharacteristic");
   ProtosWriteCharacteristicRequest *request = [[ProtosWriteCharacteristicRequest alloc] init];
   [request setRemoteId:[peripheral.identifier UUIDString]];
   [request setCharacteristicUuid:[characteristic.UUID fullUUIDString]];
@@ -499,7 +499,7 @@ typedef NS_ENUM(NSUInteger, LogLevel) {
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
-  NSLog(@"didUpdateNotificationStateForCharacteristic");
+  //NSLog(@"didUpdateNotificationStateForCharacteristic");
   // Read CCC descriptor of characteristic
   CBDescriptor *cccd = [self findCCCDescriptor:characteristic];
   if(cccd == nil || error != nil) {
@@ -721,7 +721,7 @@ typedef NS_ENUM(NSUInteger, LogLevel) {
   [result setRemoteId:[peripheral.identifier UUIDString]];
   [result setProperties:[self toCharacteristicPropsProto:characteristic.properties]];
   [result setValue:[characteristic value]];
-  NSLog(@"uuid: %@ value: %@", [characteristic.UUID fullUUIDString], [characteristic value]);
+  //NSLog(@"uuid: %@ value: %@", [characteristic.UUID fullUUIDString], [characteristic value]);
   NSMutableArray *descriptorProtos = [NSMutableArray new];
   for(CBDescriptor *d in [characteristic descriptors]) {
     [descriptorProtos addObject:[self toDescriptorProto:peripheral descriptor:d]];
